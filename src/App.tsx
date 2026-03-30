@@ -26,7 +26,7 @@ function formatChineseNumber(num: number) {
   return parts.join('.');
 }
 
-const Bead = ({ color, index }: { color: string, index: number }) => {
+const Bead: React.FC<{ color: string, index: number }> = ({ color, index }) => {
   // 容器高度 340px，内容高度 332px。算珠高度 24px (h-6)。
   // 目标位置在底部堆叠
   const targetTop = 332 - (index + 1) * 24;
@@ -264,7 +264,7 @@ function CounterScreen({
           重新设置
         </button>
         <h1 className="text-2xl md:text-4xl font-black text-gray-800 tracking-wider hidden md:block">
-          ✨ 欢乐数位计数器 ✨
+          ✨ 双十湖里数学课堂 ✨
         </h1>
         <div className="w-[100px]"></div> {/* 占位以居中标题 */}
       </div>
